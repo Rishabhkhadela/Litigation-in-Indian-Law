@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtualenvs
+venv/
+.venv/
+ENV/
+env/
+
+# IDE/editor
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# App/runtime outputs
+tmp_images/
+results/
+*.log
+
+# Large local artifacts (generated / not suitable for GitHub)
+case_embeddings.npy
+case_texts.pkl
+master_combined.csv
+multi_train.csv
+single_train.csv
+
+# Dataset folder is very large; keep only instructions
+dataset/*
+!dataset/README.md
+
+# Model weights are too large for GitHub; keep small tokenizer/config files + instructions
+fine_tuned_model/model.safetensors
+fine_tuned_model/pytorch_model.bin
+!fine_tuned_model/README.md
